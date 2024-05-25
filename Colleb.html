@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+</head>
+<body>
+    <!-- Navbar  -->
+    <header>
+        <a href="#home" class="logo">
+<i class='bx bxs-face-mask'></i>Games
+        </a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <!-- menu  -->
+        <ul class="navbar">
+            <li><a href="index.html" class="home-active">Home</a></li>
+            <li><a href="#movies">Game List</a></li>
+            <li><a href="#coming">RPG Games</a></li>
+            <li><a href="#newsletter">Youtuber</a></li>
+   <div id="jam"></div>
+   <div id="unit">
+   </div>
+   <style>
+.jam-digital {
+   width: 70%;
+   margin: 10% 30%;
+}
+#jam span {
+   float: left;
+   text-align: center;
+   font-size: 20px;
+   margin: 0 2.5%;
+   padding: 30px;
+   width: 17%;
+   border-radius: 20px;
+   box-sizing: border-box;
+   color: white;
+      text-shadow: 2px 2px 2px rgba(10, 10, 10, 0.7)
+}
+#jam span:nth-child(1) {
+
+   background: black;
+
+}
+#jam span:nth-child(2) {
+   background: black;
+}
+#jam span:nth-child(3) {
+   background: black;
+}
+#jam::after {
+   content: "";
+   display: block;
+   clear: both;
+}
+span.turn {
+   animation: turn 0.7s ease;
+}
+@keyframes turn {
+   0% {transform: rotateX(0deg)}
+   100% {transform: rotateX(360deg)}
+}
+@media screen and (max-width: 980px){
+   #jam span {
+      float: left;
+      text-align: center;
+      font-size: 20px;
+      margin: 0 1.5%;
+      padding: 20px;
+      width: 30%;
+      text-shadow: 2px 2px 2px rgba(10, 10, 10, 0.7);
+      color: white;
+   }
+   .jam-digital {
+      width: 100%;
+      margin: 10% 20%;
+   }
+   #unit span {
+      width: 23%;
+   }
+}
+   </style>
+   <script>
+     function animation(span) {
+   span.className = "turn";
+   setTimeout(function () {
+      span.className = ""
+   }, 700);
+}
+
+function jam() {
+   setInterval(function () {
+
+      var waktu = new Date();
+      var jam   = document.getElementById('jam');
+      var hours = waktu.getHours();
+      var minutes = waktu.getMinutes();
+      var seconds = waktu.getSeconds();
+
+      if (waktu.getHours() < 10)
+      {
+         hours = '0' + waktu.getHours();
+      }
+      if (waktu.getMinutes() < 10)
+      {
+         minutes = '0' + waktu.getMinutes();
+      }
+      if (waktu.getSeconds() < 10)
+      {
+         seconds = '0' + waktu.getSeconds();
+      }
+      jam.innerHTML  = '<span>' + hours + '</span>'
+                     + '<span>' + minutes + '</span>'
+                     + '<span>' + seconds +'</span>';
+
+      var spans      = jam.getElementsByTagName('span');
+      animation(spans[2]);
+      if (seconds == 0) animation(spans[1]);
+      if (minutes == 0 && seconds == 0) animation(spans[0]);
+
+   }, 1000);
+}
+
+jam();
+
+   </script>
+        </ul>
+        <img src="3.png" width="" height="40px"></img>
+    </header>
+
+    <!-- Home  -->
+    <section class="home swiper" id="home">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide container">
+                <img src="jpg/home1.jpg" alt="">
+                <div class="home-text">
+                    <span>HolodayGames</span>
+                    <h1>Games Website <br>Dead Zed</h1>
+                    <a href="" class="game">Play Now</a>
+                    <a href="https://id.y8.com/games/dead_zed/mobile" class="play">
+                        <i class='bx bx-play' ></i>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-slide container">
+                <img src="jpg/home2.jpg" alt="">
+                <div class="home-text">
+                    <span>HolodayGames</span>
+                    <h1>Games Website <br>Alpha Space Invasion</h1>
+                    <a href="" class="game">Play Now</a>
+                    <a href="https://id.y8.com/games/alpha_space_invasion/mobile" class="play">
+                        <i class='bx bx-play' ></i>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-slide container">
+                <img src="jpg/home3.jpg" alt="">
+                <div class="home-text">
+                    <span>HolodayGames</span>
+                    <h1>Games Website <br>Sniper Clash 3D</h1>
+                    <a href="" class="game">Play Now</a>
+                    <a href="https://id.y8.com/games/sniper_clash_3d/mobile" class="play">
+                        <i class='bx bx-play' ></i>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-slide container">
+                <img src="jpg/home4.jpg" alt="">
+                <div class="home-text">
+                    <span>HolodayGames</span>
+                    <h1>Games Website <br>Moon Clash Heroes</h1>
+                    <a href="" class="game">Play Now</a>
+                    <a href="https://id.y8.com/games/moon_clash_heroes/mobile" class="play">
+                        <i class='bx bx-play' ></i>
+                    </a>
+                </div>
+            </div>
+                     <div class="swiper-slide container">
+                <img src="jpg/home5.jpg" alt="">
+                <div class="home-text">
+                    <span>HolodayGames</span>
+                    <h1>Games Website <br>Spaceship Survival Shooter</h1>
+                    <a href="" class="game">Play Now</a>
+                    <a href="https://id.y8.com/games/spaceship_survival_shooter/mobile" class="play">
+                        <i class='bx bx-play' ></i>
+                    </a>
+                </div>
+            </div>
+                        <div class="swiper-slide container">
+
+                <img src="jpg/home6.jpg" alt="">
+
+                <div class="home-text">
+                    <span>HolodayGames</span>
+                    <h1>Games Website <br>War Master</h1>
+                    <a href="" class="game">Play Now</a>
+                    <a href="https://id.y8.com/games/war_master/mobile" class="play">
+                        <i class='bx bx-play' ></i>
+                    </a>
+                </div>
+            </div>
+                        <div class="swiper-slide container">
+
+                <img src="jpg/home7.jpg" alt="">
+
+                <div class="home-text">
+                    <span>HolodayGames</span>
+                    <h1>Games Website <br>The Dropping Dead</h1>
+                    <a href="" class="game">Play Now</a>
+                    <a href="https://id.y8.com/games/the_dropping_dead/mobile" class="play">
+                        <i class='bx bx-play' ></i>
+                    </a>
+                </div>
+            </div>
+                        <div class="swiper-slide container">
+
+                <img src="jpg/home8.jpg" alt="">
+
+                <div class="home-text">
+                    <span>HolodayGames</span>
+                    <h1>Games Website <br>Robot Butcher</h1>
+                    <a href="" class="game">Play Now</a>
+                    <a href="https://id.y8.com/games/robot_butcher/mobile" class="play">
+                        <i class='bx bx-play' ></i>
+                    </a>
+                </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+    </section>
+
+    <!-- Movies  -->
+    <div class="movies" id="movies">
+        <h2 class="heading">Holoday Game List</h2>
+        <!-- Movies container  -->
+        <div class="movies-container">
+            <!-- box-1  -->
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/agent_fight_3d/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>agent fight 3d</h3>
+                <span>Games Web | Battle</span>
+            </div>
+            <!-- box-2  -->
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/music_cat_piano_tiles_game_3d/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>music cat piano tiles game 3d</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+            <!-- box-3  -->
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/snake_island_3d/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>snake island 3d</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+            <!-- box-4  -->
+
+            <div class="box">
+
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/build_castle_3d/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>build castle 3d</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+                        <!-- box-5  -->
+
+            <div class="box">
+
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/ski_rush_3d/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>ski rush 3d</h3>
+                <span>Games Web | Run</span>
+            </div>
+                        <!-- box-6  -->
+
+            <div class="box">
+
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/merge_car_3d/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>merge car 3d</h3>
+                <span>Games Web | Battle</span>
+            </div>
+                        <!-- box-7  -->
+
+            <div class="box">
+
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/fun_escape_3d/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>fun escape 3d</h3>
+                <span>Games Web | Run</span>
+            </div>
+                        <!-- box-8  -->
+
+            <div class="box">
+
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/murder_case_clue_3d/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>murder case clue 3d</h3>
+                <span>Games Web | build</span>
+            </div>
+                        <!-- box-9  -->
+
+            <div class="box">
+
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/they_are_coming_3d/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>they are coming 3d</h3>
+                <span>Games Web | Battle</span>
+            </div>
+                        <!-- box-10  -->
+
+            <div class="box">
+
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/bridal_race_3d/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>bridal race 3d</h3>
+                <span>Games Web | Run</span>
+            </div>
+                                    <!-- box-11  -->
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/keep_out_/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>keep out</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+                      <!-- box-12  -->
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/day_d_tower_rush/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>day d tower rush</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+                 <!-- box-13  -->
+
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/cursed_cabin/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>cursed cabin</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+                    <!-- box-14  -->
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/restaurant_hidden_differences/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>restaurant hidden differences</h3>
+                <span>Games Web | Brain</span>
+            </div>
+                    <!-- box-15  -->
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/xmas_2020_sudoku/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>xmas 2020 sudoku</h3>
+                <span>Games Web | Brain</span>
+            </div>
+                    <!-- box-16  -->
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/mini_duels_battle/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>mini duels battle</h3>
+                <span>Games Web | Brain</span>
+            </div>
+                       <!-- box-17  -->
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/hot_dog_bush/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>hot dog bush</h3>
+                <span>Games Web | Brain</span>
+            </div>
+                                  <!-- box-18  -->
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/1010_elixir_alchemy/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>1010 elixir alchemy</h3>
+                <span>Games Web | Brain</span>
+            </div>
+                                  <!-- box-19  -->
+
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/home_pin/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>home pin</h3>
+                <span>Games Web | Brain</span>
+            </div>
+                                  <!-- box-20  -->
+
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/merge_race_3d/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>merge race 3d</h3>
+                <span>Games Web | Run</span>
+            </div>
+                                  <!-- box-21  -->
+
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/fat_race_3d/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>fat race 3d</h3>
+                <span>Games Web | Run</span>
+            </div>
+                                  <!-- box-22  -->
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/stair_race_3d/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>stair race 3d</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+                                  <!-- box-23  -->
+
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/funny_shooter_3d/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>funny shooter 3d</h3>
+                <span>Games Web | RPG</span>
+            </div>
+                                  <!-- box-23  -->
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/dumb_ways_to_die_2_the_games/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>dumb ways to die 2 the games</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+                                  <!-- box-24  -->
+            <div class="box">
+
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/beach_volleyball_3d/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>beach volleyball 3d</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+                                  <!-- box-25  -->
+
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/legend_of_warship/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>legend of warship</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+                                  <!-- box-25 -->
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/we_bare_bears_defend_the_sandcastle_/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>we bare bears defend thensandcastle</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+                                  <!-- box-26  -->
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/scooter_xtreme_3d/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>scooter xtreme 3d</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+                                  <!-- box-27  -->
+
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/obby_parkour_ultimate/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>obby parkour ultimate</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+                                <!-- box-28  -->
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/drift_dudes/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>drift dudes</h3>
+                <span>Games Web | Strategy</span>
+            </div> 
+                                  <!-- box-29  -->
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/sniper_king_2d_the_dark_city/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>sniper king 2d the dark city</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+                                  <!-- box-30  -->
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/tennis_open_2020/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>tennis open 2020</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+                                  <!-- box-31  -->
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/drop_guys_knockout_tournament/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>drop guys knockout tournament</h3>
+                <span>Games Web | Brain</span>
+            </div>
+                                  <!-- box-32  -->
+
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/squid_game_2d/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>squid game 2d</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+                        <div class="box">
+
+                <div class="box-img">
+
+                    <a href="https://id.y8.com/games/imposter_3d/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>imposter 3d</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+            <!-- box-2  -->
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/doomsday_survival_rpg_shooter/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>doomsday survival rpg shooter</h3>
+                <span>Games Web | Brain</span>
+            </div>
+                        <!-- box-3  -->
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/ski_challenge_3d/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>ski challenge 3d</h3>
+                <span>Games Web | Run</span>
+            </div>
+                        <!-- box-4  -->
+
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/mr_hunter_2d/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>mr hunter 2d</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+                        <!-- box-5  -->
+
+            <div class="box">
+
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/bubble_shooter_html5/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>bubble shooter html5</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+                        <!-- box-6  -->
+
+            <div class="box">
+
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/shoot_angry_zombies/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>shoot angry zombies</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+                        <!-- box-7  -->
+
+            <div class="box">
+
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/worm_hunt_snake_game_io_zone/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>worm hunt snake game io zone</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+                        <!-- box-8  -->
+
+            <div class="box">
+
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/murder_to_kill_or_not_to_kill/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>murder to kill or not to kill</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+                        <!-- box-
+                        10-->
+
+            <div class="box">
+
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/the_legend_of_dead_eye_gulch/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>the legend of dead eye gulch funkin hugie wugie</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+                          <!-- box- 11-->
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/minecraft_shooter_3d/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>minecraft shooter 3d </h3>
+                <span>Games Web | Strategy</span>
+            </div>
+                                      <!-- box- 12-->
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/noob_vs_zombie_2/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>noob vs zombie 2 </h3>
+                <span>Games Web | Strategy</span>
+            </div>
+                                      <!-- box- 13-->
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/chess_multi_player/mobile"><img src="logo1.jpg" alt=""></a>
+                </div>
+                <h3>chess multi player </h3>
+                <span>Games Web | Brain</span>
+            </div>
+            </div>
+              </section>
+
+    <!-- coming  -->
+
+    <section class="coming" id="coming">
+        <h2 class="heading">Youtuber Indonesia  <i class='bx bxl-youtube'></i></h2>
+        <!-- coming contanier  -->
+        <div class="coming-container swiper">
+            <div class="swiper-wrapper">
+                <!-- box-1  -->
+                <div class="swiper-slide box">
+                   <div class="box-img">
+                        <img src="windah.jpg" alt="">
+                    </div>
+                    <h3>Windah Bersudara</h3>
+                                    <span>Gamers ID | <i class='bx bxl-youtube'></i>  <i class='bx bxl-instagram' style='color:rgba(193,18,177,0.81)'  ></i>  <i class='bx bxl-facebook-square' style='color:rgba(12,63,255,0.95)'  ></i></span>
+                </div>
+                     <!--windah-->
+                <div class="swiper-slide box">
+                   <div class="box-img">
+                        <img src="logowindah.jpg" alt="">
+                    </div>
+                    <h3>Windah Bersudara</h3>
+                                    <span>Logo villain | <i class='bx bxl-youtube'></i>  <i class='bx bxl-instagram' style='color:rgba(193,18,177,0.81)'  ></i>  <i class='bx bxl-facebook-square' style='color:rgba(12,63,255,0.95)'  ></i></span>
+                </div>
+                <!-- box-2  -->
+                <div class="swiper-slide box">
+                   <div class="box-img">
+                        <img src="miau.jpg" alt="">
+                    </div>
+                    <h3>MiawAug</h3>
+                     <span>Gamers ID |  <i class='bx bxl-youtube'></i>  <i class='bx bxl-instagram' style='color:rgba(193,18,177,0.81)'  ></i>  <i class='bx bxl-facebook-square' style='color:rgba(12,63,255,0.95)'  ></i></span>
+                </div>
+                                <!--MiauAug -->
+
+                <div class="swiper-slide box">
+
+                   <div class="box-img">
+                        <img src="logomiau.jpg" alt="">
+                    </div>
+                    <h3>MiawAug</h3>
+                                    <span>Logo villain | <i class='bx bxl-youtube'></i>  <i class='bx bxl-instagram' style='color:rgba(193,18,177,0.81)'  ></i>  <i class='bx bxl-facebook-square' style='color:rgba(12,63,255,0.95)'  ></i></span>
+                </div>
+            </div>
+        </div>
+            <!-- Movies  -->
+
+    <div class="movies" id="newsletter">
+
+        <h2 class="heading">Windah & MiawAug youtuber  <i class='bx bxl-youtube'></i></h2>
+        <!-- Movies container  -->
+        <div class="movies-container">
+            <!-- box-1  -->
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/friday_night_funkin_vs_whitty/mobile"><img src="jpg/c4.jpg" alt=""></a>
+                </div>
+                <h3>friday night funkin vs whitty</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+            <!-- box-2  -->
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/friday_night_funkin_music_notes/mobile"><img src="jpg/c5.jpg" alt=""></a>
+                </div>
+                <h3>friday night funkin music notes</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+                        <!-- box-3  -->
+            <div class="box">
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/friday_night_funkin_2_players/mobile"><img src="jpg/c15.jpg" alt=""></a>
+                </div>
+                <h3>friday night funkin 2 players</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+                        <!-- box-4  -->
+
+            <div class="box">
+
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/super_friday_night_funkin_vs_neon/mobile"><img src="jpg/c16.jpg" alt=""></a>
+                </div>
+                <h3>super friday night funkin vs neon</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+                        <!-- box-5  -->
+
+            <div class="box">
+
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/super_friday_night_funkin/mobile"><img src="jpg/c17.jpg" alt=""></a>
+                </div>
+                <h3>super friday night funkin</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+                        <!-- box-6  -->
+
+            <div class="box">
+
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/friday_night_funkin_vs_wilbur_soot/mobile"><img src="jpg/c18.jpg" alt=""></a>
+                </div>
+                <h3>friday night funkin vs wilbur soot</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+                        <!-- box-7  -->
+
+            <div class="box">
+
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/friday_night_funkin_vs_whitty/mobile"><img src="jpg/c21.jpg" alt=""></a>
+                </div>
+                <h3>friday night funkin vs whitty</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+                        <!-- box-8  -->
+
+            <div class="box">
+
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/super_friday_night_funkin_at_freddy_s_2/mobile"><img src="jpg/c19.jpg" alt=""></a>
+                </div>
+                <h3>super friday night funkin at freddy s2</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+                        <!-- box-9  -->
+
+            <div class="box">
+
+                <div class="box-img">
+                    <a href="https://id.y8.com/games/super_friday_night_funkin_hugie_wugie/mobile"><img src="jpg/c20.jpg" alt=""></a>
+                </div>
+                <h3>super friday night funkin hugie wugie</h3>
+                <span>Games Web | Strategy</span>
+            </div>
+    </div>
+    
+<style>
+.btn {
+  background-color: transparent;
+  color: white;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+}
+
+.btn:hover {
+  color: crimson;
+}
+
+.playing {
+  text-align: center;
+}
+  </style>
+  <script>
+const roy2 = new Audio('sound/roy2.mp3');
+const carles2 = new Audio('sound/charles2.mp3');
+
+// selecting elements
+const prevBtn = document.querySelector('.previous');
+const playBtn = document.querySelector('.play-pause');
+const nextBtn = document.querySelector('.next');
+const songName = document.querySelector('.song-name');
+const playPauseIcon = document.querySelector('#play-pause-icon');
+
+
+const songs = [
+  { ele: roy2, audioName: 'Royalty Voice' },
+  { ele: carles2, audioName: 'Carles Voice' },
+];
+
+for(const song of songs) {
+  song.ele.addEventListener('ended', ()=> {
+    updateSong('.next');
+    playPauseSong();
+  })
+}
+
+let current = 0;
+let currentSong = songs[current].ele;
+songName.textContent = songs[current].audioName;
+
+playBtn.addEventListener('click',()=> {
+  playPauseSong();
+})
+
+nextBtn.addEventListener('click', () => {
+  updateSong('.next');
+  playPauseSong();
+});
+
+prevBtn.addEventListener('click', () => {
+  updateSong('.prev');
+  playPauseSong();
+});
+
+const updateSong = (action)=> {
+  currentSong.pause();
+  currentSong.currentTime = 0;
+
+  if(action === '.next'){
+    current++;
+    if(current > songs.length -1) current = 0;
+  }
+  if(action === '.prev'){
+    current--;
+    if(current < 0) current = songs.length - 1;
+  }
+  currentSong = songs[current].ele;
+  songName.textContent = songs[current].audioName;
+}
+
+const playPauseSong = ()=> {
+  if(currentSong.paused){
+    currentSong.play();
+    playPauseIcon.className = 'ph-bold ph-pause';
+  }
+  else {
+    currentSong.pause();
+    playPauseIcon.className = 'ph-bold ph-play';
+  }
+}
+  </script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+.wrapper{
+  max-width: 1100px;
+}
+img{
+  border-radius: 20px;
+}
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+}
+.gallery .image{
+  padding: 7px;
+  width: calc(100% / 3);
+}
+.gallery .image span{
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+.gallery .image img{
+  width: 100%;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+.gallery .image:hover img{
+  transform: scale(1.1);
+}
+
+.preview-box{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: black;
+  max-width: 700px;
+  width: 100%;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  border-radius: 3px;
+  padding: 0 5px 5px 5px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+}
+.preview-box.show{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.3s ease;
+}
+.preview-box .details{
+  display: flex;
+  align-items: center;
+  padding: 12px 15px 12px 10px;
+  justify-content: space-between;
+}
+.preview-box .details .title{
+  display: flex;
+  font-size: 18px;
+  font-weight: 400;
+}
+.details .title p{
+  margin: 0 5px;
+}
+.details .title p.current-img{
+  font-weight: 500;
+}
+.details .icon{
+  color: #007bff;
+  font-size: 20px;
+  cursor: pointer;
+}
+.preview-box .image-box{
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+.image-box .slide{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+  height: 50px;
+  width: 60px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 3px;
+}
+.slide.prev{
+  left: 0px;
+}
+.slide.next{
+  right: 0px;
+}
+.image-box img{
+  width: 100%;
+  border-radius: 0 0 3px 3px;
+}
+.shadow{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  display: none;
+  background: rgba(0,0,0,0.45);
+}
+
+@media(max-width: 1000px){
+  .gallery .image{
+    width: calc(100% / 2);
+  }
+}
+@media(max-width: 600px){
+  .gallery .image{
+    width: 100%;
+    padding: 4px;
+  }
+}
+</style>
+  <script>
+    //getting all required elements
+const gallery  = document.querySelectorAll(".image"),
+previewBox = document.querySelector(".preview-box"),
+previewImg = previewBox.querySelector("img"),
+closeIcon = previewBox.querySelector(".icon"),
+currentImg = previewBox.querySelector(".current-img"),
+totalImg = previewBox.querySelector(".total-img"),
+shadow = document.querySelector(".shadow");
+
+window.onload = ()=>{
+    for (let i = 0; i < gallery.length; i++) {
+        totalImg.textContent = gallery.length; //passing total img length to totalImg variable
+        let newIndex = i; //passing i value to newIndex variable
+        let clickedImgIndex; //creating new variable
+        
+        gallery[i].onclick = () =>{
+            clickedImgIndex = i; //passing cliked image index to created variable (clickedImgIndex)
+            function preview(){
+                currentImg.textContent = newIndex + 1; //passing current img index to currentImg varible with adding +1
+                let imageURL = gallery[newIndex].querySelector("img").src; //getting user clicked img url
+                previewImg.src = imageURL; //passing user clicked img url in previewImg src
+            }
+            preview(); //calling above function
+    
+            const prevBtn = document.querySelector(".prev");
+            const nextBtn = document.querySelector(".next");
+            if(newIndex == 0){ //if index value is equal to 0 then hide prevBtn
+                prevBtn.style.display = "none"; 
+            }
+            if(newIndex >= gallery.length - 1){ //if index value is greater and equal to gallery length by -1 then hide nextBtn
+                nextBtn.style.display = "none"; 
+            }
+            prevBtn.onclick = ()=>{ 
+                newIndex--; //decrement index
+                if(newIndex == 0){
+                    preview(); 
+                    prevBtn.style.display = "none"; 
+                }else{
+                    preview();
+                    nextBtn.style.display = "block";
+                } 
+            }
+            nextBtn.onclick = ()=>{ 
+                newIndex++; //increment index
+                if(newIndex >= gallery.length - 1){
+                    preview(); 
+                    nextBtn.style.display = "none";
+                }else{
+                    preview(); 
+                    prevBtn.style.display = "block";
+                }
+            }
+            document.querySelector("body").style.overflow = "hidden";
+            previewBox.classList.add("show"); 
+            shadow.style.display = "block"; 
+            closeIcon.onclick = ()=>{
+                newIndex = clickedImgIndex; //assigning user first clicked img index to newIndex
+                prevBtn.style.display = "block"; 
+                nextBtn.style.display = "block";
+                previewBox.classList.remove("show");
+                shadow.style.display = "none";
+                document.querySelector("body").style.overflow = "scroll";
+            }
+        }
+        
+    } 
+}
+  </script>
+
+</body>
+</html>
+    </section>
+
+    <!-- coming  -->
+
+    <section class="coming" id="coming">
+
+        <h2 class="heading">RPG Games</h2>
+        <!-- coming contanier  -->
+        <div class="coming-container swiper">
+            <div class="swiper-wrapper">
+                <!-- box-1  -->
+                <div class="swiper-slide box">
+                   <a href="https://id.y8.com/games/bike_mania/mobile"><div class="box-img">
+                        <img src="jpg/c1.jpg" alt="">
+                    </div></a>
+                    <h3>bike mania</h3>
+                                    <span>Games Web | Strategy</span>
+                </div>
+                <!-- box-2  -->
+                <div class="swiper-slide box">
+                   <a href="https://id.y8.com/games/tough_life_gangland/mobile"><div class="box-img">
+                        <img src="jpg/c2.jpg" alt="">
+                    </div></a>
+                    <h3>tough life gangland</h3>
+                                    <span>Games Web | Strategy</span>
+                </div>
+                                <!-- box-3-->
+                <div class="swiper-slide box">
+                   <a href="https://id.y8.com/games/point_rescue_arcade/mobile"><div class="box-img">
+                        <img src="jpg/c3.jpg" alt="">
+                    </div></a>
+                    <h3>point rescue arcade</h3>
+                                    <span>Games Web | Strategy</span>
+                </div>
+                                <!-- box-4-->
+                <div class="swiper-slide box">
+                   <a href="https://id.y8.com/games/friday_night_funkin_vs_whitty/mobile"><div class="box-img">
+                        <img src="jpg/c4.jpg" alt="">
+                    </div></a>
+                    <h3>friday night funkin vs whitty</h3>
+                                    <span>Games Web | Strategy</span>
+                </div>
+                                <!-- box-5-->
+                <div class="swiper-slide box">
+                   <a href="https://id.y8.com/games/friday_night_funkin_music_notes/mobile"><div class="box-img">
+                        <img src="jpg/c5.jpg" alt="">
+                    </div></a>
+                    <h3>friday night funkin music notes</h3>
+                                    <span>Games Web | Strategy</span>
+                </div>
+                                <!-- box-6-->
+                <div class="swiper-slide box">
+                   <a href="https://id.y8.com/games/we_bare_bears_fun_raiser/mobile"><div class="box-img">
+                        <img src="jpg/c6.jpg" alt="">
+                    </div></a>
+                    <h3>we bare bears fun raiser</h3>
+                                    <span>Games Web | Strategy</span>
+                </div>
+                                <!-- box-7-->
+                <div class="swiper-slide box">
+                   <a href="https://id.y8.com/games/we_bare_bears_defend_the_sandcastle_/mobile"><div class="box-img">
+                        <img src="jpg/c7.jpg" alt="">
+                    </div></a>
+                    <h3>we bare bears defend the sandcastle</h3>
+                                    <span>Games Web | Strategy</span>
+                </div>
+                                <!-- box-8-->
+                <div class="swiper-slide box">
+                   <a href="https://id.y8.com/games/murder_mafia/mobile"><div class="box-img">
+                        <img src="jpg/c8.jpg" alt="">
+                    </div></a>
+                    <h3>murder mafia</h3>
+                                    <span>Games Web | Strategy</span>
+                </div>
+                                <!-- box-9-->
+                <div class="swiper-slide box">
+                   <a href="https://id.y8.com/games/drunken_boxing/mobile"><div class="box-img">
+                        <img src="jpg/c9.jpg" alt="">
+                    </div></a>
+                    <h3>drunken boxing</h3>
+                                    <span>Games Web | Strategy</span>
+                </div>
+                                <!-- box-10-->
+                <div class="swiper-slide box">
+                   <a href="https://id.y8.com/games/thumb_wars/mobile"><div class="box-img">
+                        <img src="jpg/c10.jpg" alt="">
+                    </div></a>
+                    <h3>thumb wars</h3>
+                                    <span>Games Web | Strategy</span>
+                </div>
+            </div>
+        </div>
+    </section>
+  </head>
+  <body>
+  <center><div class="wrapper">
+      <input type="radio" name="slide" id="one" checked>
+      <input type="radio" name="slide" id="two">
+      <input type="radio" name="slide" id="three">
+      <div class="img img-1">
+        <img src="2.png" alt="">
+      </div>
+      <div class="img img-2">
+        <img src="1.jpg" alt="">
+      </div>
+      <div class="img img-3">
+        <img src="2.jpg" alt="">
+      </div>
+      <div class="sliders">
+        <label for="one" class="one"></label>
+        <label for="two" class="two"></label>
+        <label for="three" class="three"></label>
+      </div>
+    </div></center>
+    <center><p>Dwi Bakti Dev</p></center>
+<style>
+.wrapper{
+  position: relative;
+  width: 200px;
+  height: 400px;
+  
+}
+.wrapper .img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.wrapper .img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  clip-path: circle(0% at 0% 100%);
+  transition: all 0.7s;
+  
+}
+#one:checked ~ .img-1 img{
+  clip-path: circle(150% at 0% 100%);
+}
+#two:checked ~ .img-1 img,
+#two:checked ~ .img-2 img{
+  clip-path: circle(150% at 0% 100%);
+}
+#three:checked ~ .img-1 img,
+#three:checked ~ .img-2 img,
+#three:checked ~ .img-3 img{
+  clip-path: circle(150% at 0% 100%);
+}
+#four:checked ~ .img-1 img,
+#four:checked ~ .img-2 img,
+#four:checked ~ .img-3 img,
+#four:checked ~ .img-4 img{
+  clip-path: circle(150% at 0% 100%);
+}
+#five:checked ~ .img-1 img,
+#five:checked ~ .img-2 img,
+#five:checked ~ .img-3 img,
+#five:checked ~ .img-4 img,
+#five:checked ~ .img-5 img{
+  clip-path: circle(150% at 0% 100%);
+}
+.wrapper .sliders{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+  display: flex;
+}
+.wrapper .sliders label{
+  border: 2px solid crimson;
+  width: 13px;
+  height: 13px;
+  margin: 0 3px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#one:checked ~ .sliders label.one,
+#two:checked ~ .sliders label.two,
+#three:checked ~ .sliders label.three,
+#four:checked ~ .sliders label.four,
+#five:checked ~ .sliders label.five{
+  width: 35px;
+  border-radius: 14px;
+  background: crimson;
+}
+.sliders label:hover{
+  background: rgb(142,197,252);
+}
+input[type="radio"]{
+  display: none;
+}
+</style>
+  </body>
+</html>
+    <!-- footer  -->
+    <section class="footer">
+        <a href="" class="logo">
+<i class='bx bxs-face-mask'></i>HolodayGames
+        </a>
+        <div class="social">
+            <a href="https://fb.gg/play/"><i class='bx bxl-facebook'></i></a>
+            </div>
+            <p>Facebook Games</p>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="css/main.js"></script>
+</body>
+</html>
